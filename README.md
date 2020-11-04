@@ -1,2 +1,2 @@
-# nirmal-jose.github.io
+# Nirmal Jose
 Resume
