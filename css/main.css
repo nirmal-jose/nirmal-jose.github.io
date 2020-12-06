@@ -1,0 +1,45 @@
+
+img.rounded {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  body{
+      background: #000;
+      color: #EEE;
+  }
+  
+  img.roundedsmall {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  
+  h2{  
+    font-size: 20px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  p{
+    font-size: 18px;
+  }
+  b{
+    font-size: 18px;
+  }
+  ul{
+    margin-bottom: 1.5px;
+  }
+  a:hover{
+    text-decoration: underline;
+    color:#90ee90;}
+  a {text-decoration: none; color:#20b2aa}
+
+  div {
+   display: inline-block;
+   position: relative;
+   z-index : 1;
+}
+div img { display: block; }
+div + img { position: absolute; z-index: 1; top: 50px; left: 20px; }
