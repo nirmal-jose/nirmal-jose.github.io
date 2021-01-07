@@ -13,6 +13,19 @@
             <b>
                 AutoVision: Driving Scene Risk Assessment
             </b>
+            <p>
+                The Android application captures 60 Frames during driving events like hard acceleration, sudden braking, 
+                overspeeding etc. Later the frames are processed to detect and track interesting objects during the 
+                driving scene to find there approximate proximity to the vehicle. The frames' objects were detected using 
+                TensorFlow lite model from this 
+                <a href="https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android"
+                class="hover">project</a>. 
+                Interesting class objects were car, bus, truck, motorcycle, bicycle and person. The objects were further tracked based on 
+                custom tracker depending on their position during the event. The user can later review events captured with 
+                information about some level of severity and object which came the closest. The below images shows the event 
+                captured and processed as mentioned above with details about object class and distance from the source. The 
+                second image depicts the android application review screen with vital information.
+            </p>
             <p>             
                 <div class="grid">
                     <figure>
@@ -28,6 +41,17 @@
             <b>
                 TurboCharger Fault Detection
             </b>
+            <p>
+                Detection of TurboCharger failure or malfunction using PID data and DTC info. The PID data were collected 
+                from the vehicle CAN network using OBD II protocols and telematics device from various vehicles. The 
+                TurboCharger performance was evaluated based on the amount of pressure created inside the intake manifold 
+                using Intake Air Temperature (IAT) & Manifold Absolute Pressure or Mass Air Flow (MAF) sensor depending on 
+                their availability. The value of these quantities where further binned based on Engine RPM and MAF. 
+                Reference data for comparison were built by taking the median value for each bin collected across the same 
+                make-model, which doesn't have any DTC related to TurboCharger. The bin values' euclidean distance was taken 
+                to compare between vehicle and reference, with some threshold. The below images depicts the study carried out 
+                between reference data & defective vehicle, and the same vehicle before and after DTC occurrence.
+            </p>
             <p>             
                 <div class="grid">
                     <figure>
@@ -45,6 +69,21 @@
             <b>
                 Gear Shift Recommendation
             </b>
+            <p>
+                Gear Shift recommendation for vehicle owners was provided based on there shifting behaviour using 
+                Speed and Engine RPM data. The PID data were collected from the vehicle CAN network using OBD II 
+                protocols and telematics device from various vehicles. The speed and rpm data collected were used 
+                to find various gear ratio, these values were further binned to respective gears using K-means 
+                clustering technique. The reference speed limits for each make-model and gears were collected 
+                from a massive dataset of speed-rpm data across various drivers. The speed limits were decided 
+                based on upper and lower percentile value across the data for respective gears.Further, the 
+                boundaries were smoothened to avoid gaps and smoother transmission.</br></br>
+                Each driver was compared across gears and respective speed limits. The instance of wrong gears 
+                where found, and further classified these occurrences into acceleration or deceleration condition. 
+                The most predominant recommendation found were provided to the customer, as shown below in 
+                Fig. Gear Shift Recommendation Card. The below also depicts the K-means Clustering technique 
+                for finding gears and representation of gear utilisation by a particular driver.
+            </p>
             <p>             
                 <div class="grid">
                     <figure>
