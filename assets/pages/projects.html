@@ -6,6 +6,10 @@
     <link rel="stylesheet" type="text/css" href="../../css/gallery-grid.css" />
 </head>
 
+<body>
+    <input type=button onClick="parent.location='../../index.html'" value='Home'>
+</body>
+
 <h2>Projects</h2>
 <body>
     <ul type="disc">
@@ -18,7 +22,7 @@
                 overspeeding etc. Later the frames are processed to detect and track interesting objects during the 
                 driving scene to find there approximate proximity to the vehicle. The frames' objects were detected using 
                 TensorFlow lite model from this 
-                <a href="https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android"
+                <a target="_blank" href="https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android"
                 class="hover">project</a>. 
                 Interesting class objects were car, bus, truck, motorcycle, bicycle and person. The objects were further tracked based on 
                 custom tracker depending on their position during the event. The user can later review events captured with 
