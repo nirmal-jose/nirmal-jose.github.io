@@ -45,11 +45,13 @@ div img { display: block; }
 div + img { position: absolute; z-index: 1; top: 50px; left: 20px; }
 input {
   padding: 10px 10px;
+  margin-right:2%;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
   background-color: rgb(62, 198, 240);
   border-radius: 6px;
   outline: none;
-  float: right;
+  position:fixed;
+  right: 0;
 }
