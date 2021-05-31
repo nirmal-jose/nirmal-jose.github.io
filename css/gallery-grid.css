@@ -22,3 +22,9 @@ margin-inline-end: 10px;
 width: 100px;
 height: 100px;
 }
+
+.center_image {
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }

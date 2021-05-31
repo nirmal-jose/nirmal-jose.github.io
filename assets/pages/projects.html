@@ -14,21 +14,76 @@
 <body>
     <ul type="disc">
         <li>
-            <b>
+            <a href="#vehicle_inspection">
+            <b id="vehicle_inspection">
+                Vehicle Inspection using OBD-II PID Data
+            </b>
+            </a>
+            <p>
+                Vehicle Inspection reports are generated from PID data collected for each vehicle for a fixed period, 
+                say a month. The supported PIDs for each vehicle will be different, so initially, the supported PIDs 
+                by each vehicle are collected, and then the PID config for vehicle inspection will be generated. The 
+                significant PID used for inspection is categorised into primary and secondary. The primary PIDs are 
+                the default ones required for the proper functioning of the telematics device. The secondary PIDs are 
+                further classified into two depending on their state being a dynamic or static nature. Then the PID 
+                config files are generated, which will have the primary and secondary PIDs required to collect data 
+                for vehicle inspection. Most of the vehicles will have more than one config file so that we need to 
+                rotate PID config files during the period of inspection. The rotating of PID config files is based on 
+                their importance and the amount of data required for running the vehicle inspection algorithm. Each 
+                trip across the inspection period will be inspected, and a weighted average on distance traveled will 
+                be considered an overall rating for the vehicle during the period. Along with PID data, DTC data is 
+                also collected for the period to show vehicle owners various defects detected by vehicles for better 
+                maintenance. The battery voltage data is also collected during the period, and battery ratings are 
+                given based on the voltage post-trip. The vehicle inspection provided ratings and details about fuel 
+                economy, battery voltage, max power and torque achieved, idle rpm, coolant temperature, engine load 
+                distribution, charging system (alternator), O2 sensors, and fuel trims, along with distance travelled 
+                for the period. Along with DTC found during the period, their severity, system info, and distance 
+                travelled with Malfunction Indication Light (MIL) ON and since clearing DTCs. The inspection report 
+                is available across the mobile application (as shown in figures below) and in the web app for fleet 
+                owners. This will give a performance, safety, and maintenance insights to customers on a regular 
+                basis for keeping their vehicle in good condition. 
+                <br/><br/>
+                <a target="_blank" href="https://www.sensight.in/predictive-maintenance.html"
+                class="hover">
+                    Project Website
+                </a> <br/>
+            </p>
+            <p>             
+                <div class="grid">
+                    <figure>
+                      <img class="center_image" src="../projects/autowiz_vehicle_inspection/inspection_report.png" height="300px">
+                      <a href="../projects/autowiz_vehicle_inspection/inspection_report.png"></a>
+                      <figcaption>Fig. Vehicle Inspection Report (without DTC)</figcaption> 
+                    </figure>
+                    <figure>
+                        <img class="center_image" src="../projects/autowiz_vehicle_inspection/with_DTC.png" height="300px">
+                        <figcaption>Fig. Vehicle Inspection Report (with DTC)</figcaption> 
+                    </figure>
+                    <figure>
+                        <img class="center_image" src="../projects/autowiz_vehicle_inspection/DTC_info.png" height="300px">
+                        <figcaption>Fig. DTC Info</figcaption> 
+                    </figure>
+                </div>
+            </p>
+        </li>
+        <li>
+            <a href="#autovision">
+            <b id="autovision">
                 AutoVision: Driving Scene Risk Assessment
             </b>
+            </a>
             <p>
-                The Android application captures 60 Frames during driving events like hard acceleration, sudden braking, 
-                overspeeding etc. Later the frames are processed to detect and track interesting objects during the 
-                driving scene to find there approximate proximity to the vehicle. The frames' objects were detected using 
-                TensorFlow lite model from this 
+                The Android application captures 60 Frames during driving events like hard acceleration, sudden braking, overspeeding, 
+                etc. Later the frames are processed to detect and track interesting objects during the driving scene to find their 
+                approximate proximity to the vehicle. The frames' objects were detected using the TensorFlow lite model from this  
                 <a target="_blank" href="https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android"
                 class="hover">project</a>. 
-                Interesting class objects were car, bus, truck, motorcycle, bicycle and person. The objects were further tracked based on 
-                custom tracker depending on their position during the event. The user can later review events captured with 
-                information about some level of severity and object which came the closest. The below images shows the event 
-                captured and processed as mentioned above with details about object class and distance from the source. The 
-                second image depicts the android application review screen with vital information.<br/><br/>
+                Interesting class objects were a car, bus, truck, motorcycle, bicycle, and person. The objects were further tracked 
+                based on a custom tracker depending on their position during the event. The user can later review events captured 
+                with information about some severity and object that came the closest. The below images shows the event captured 
+                and processed as mentioned above with details about object class and distance from the source. The second image 
+                depicts the android application review screen with vital information.
+                <br/><br/>
                 <a target="_blank" href="https://www.sensight.in/machine-vision-driving.html"
                 class="hover">
                     Project Website
@@ -37,28 +92,32 @@
             <p>             
                 <div class="grid">
                     <figure>
-                      <img src="../projects/autowiz_autovision/autovision_sample.gif">
+                      <img class="center_image" src="../projects/autowiz_autovision/autovision_sample.gif">
+                      <figcaption>Fig. Shows the event captured and processed as mentioned above with details about object class and distance from the source</figcaption>
                     </figure>
                     <figure>
-                        <img src="../projects/autowiz_autovision/autovision_android.gif" height="300px">
+                        <img class="center_image" src="../projects/autowiz_autovision/autovision_android.gif" height="300px">
+                        <figcaption>Fig. Android application review screen with vital information</figcaption>
                     </figure>
                 </div>
             </p>
         </li>
         <li>
-            <b>
+            <a href="#turbo_charger">
+            <b id="turbo_charger">
                 TurboCharger Fault Detection
             </b>
+            </a>
             <p>
                 Detection of TurboCharger failure or malfunction using PID data and DTC info. The PID data were collected 
-                from the vehicle CAN network using OBD II protocols and telematics device from various vehicles. The 
-                TurboCharger performance was evaluated based on the amount of pressure created inside the intake manifold 
-                using Intake Air Temperature (IAT) & Manifold Absolute Pressure or Mass Air Flow (MAF) sensor depending on 
-                their availability. The value of these quantities where further binned based on Engine RPM and MAF. 
-                Reference data for comparison were built by taking the median value for each bin collected across the same 
-                make-model, which doesn't have any DTC related to TurboCharger. The bin values' euclidean distance was taken 
-                to compare between vehicle and reference, with some threshold. The below images depicts the study carried out 
-                between reference data & defective vehicle, and the same vehicle before and after DTC occurrence.
+                from the vehicle CAN network using OBD II protocols and telematics devices from various vehicles. 
+                The TurboCharger performance was evaluated based on the amount of pressure created inside the intake 
+                manifold using Intake Air Temperature (IAT) & Manifold Absolute Pressure or Mass Air Flow (MAF) sensor 
+                depending on their availability. The value of these quantities where further binned based on Engine RPM and 
+                MAF. Reference data for comparison were built by taking the median value for each bin collected across the 
+                same make-model, which doesn't have any DTC related to TurboCharger. The bin values' euclidean distance was 
+                taken to compare between vehicle and reference, with some threshold. The below images depicts the study 
+                carried out between reference data & defective vehicle, and the same vehicle before and after DTC occurrence.
             </p>
             <p>             
                 <div class="grid">
@@ -74,23 +133,25 @@
             </p>
         </li>
         <li>
-            <b>
+            <a href="#gear_shift">
+            <b id="gear_shift">
                 Gear Shift Recommendation
             </b>
+            </a>
             <p>
-                Gear Shift recommendation for vehicle owners was provided based on there shifting behaviour using 
+                Gear Shift recommendation for vehicle owners was provided based on their shifting behaviour using 
                 Speed and Engine RPM data. The PID data were collected from the vehicle CAN network using OBD II 
-                protocols and telematics device from various vehicles. The speed and rpm data collected were used 
-                to find various gear ratio, these values were further binned to respective gears using K-means 
-                clustering technique. The reference speed limits for each make-model and gears were collected 
-                from a massive dataset of speed-rpm data across various drivers. The speed limits were decided 
-                based on upper and lower percentile value across the data for respective gears.Further, the 
-                boundaries were smoothened to avoid gaps and smoother transmission.</br></br>
-                Each driver was compared across gears and respective speed limits. The instance of wrong gears 
-                where found, and further classified these occurrences into acceleration or deceleration condition. 
-                The most predominant recommendation found were provided to the customer, as shown below in 
-                Fig. Gear Shift Recommendation Card. The below also depicts the K-means Clustering technique 
-                for finding gears and representation of gear utilisation by a particular driver.
+                protocols and telematics devices from various vehicles. The speed and rpm data collected were used 
+                to find various gear ratios; these values were further binned to respective gears using the K-means 
+                clustering technique. The reference speed limits for each make-model and gears were collected from 
+                a massive dataset of speed-rpm data across various drivers. The speed limits were decided based on 
+                upper and lower percentile values across the data for respective gears. Further, the boundaries were 
+                smoothened to avoid gaps and smoother transmission.</br></br>
+                Each driver was compared across gears and respective speed limits. The instance of wrong gears was 
+                found and further classified these occurrences into acceleration or deceleration conditions. The 
+                most predominant recommendation found were provided to the customer, as shown below in Fig. Gear 
+                Shift Recommendation Card. The below also depicts the K-means Clustering technique for finding gears 
+                and representation of gear utilisation by a particular driver.
             </p>
             <p>             
                 <div class="grid">
@@ -110,9 +171,11 @@
             </p>
         </li>
         <li>
-            <b>
+            <a href="#combustion_model">
+            <b id="combustion_model">
                 0D Combustion Modeling of Compression Ignition Engines Using Python
             </b>
+            </a>
             <p>
                 Modeling Compression Ignition Combustion using Zero-Dimensional 
                 Model for
@@ -141,9 +204,11 @@
             </p>
         </li>
         <li>
-            <b>
+            <a href="#bio_ethanol">
+            <b id="bio_ethanol">
                 Ethanol Extraction from Bamboo Biomass
             </b>
+            </a>
             <p>
                 Setting up production setup for Bio-Ethanol extraction from Bamboo Biomass
                 by Pretreatment, <br/>Enzymatic Saccharification and Fermentation.<br>
