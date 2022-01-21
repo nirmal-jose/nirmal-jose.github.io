@@ -14,55 +14,118 @@
 <body>
     <ul type="disc">
         <li>
+            <a href="#lane_departure">
+            <b id="lane_departure">
+                Lane Departure Warning System 
+            </b>
+            </a>
+            <br/><br/>
+            <details>
+                <summary>Summary</summary>
+                <p>
+                    This work aimed to study and understand the lane departure warning system while going through implemention 
+                    and development of sensors and perceptions for the system. A systems engineering approach was taken to 
+                    understand the system requirements, use cases, and validation strategies. Also identified key technology 
+                    enablers for the system. The system concept was designed in Python using libraries like OpenCV and NumPy. 
+                    The system designed accepts image, which is processed to detect road lane using filtering, thresholding and 
+                    perspective transform. The road curvature and road type is estimated by fitting the lane detected to a 
+                    second-order polynomial. The vehicle's position with respect to the lane is determined, and a lane departure 
+                    warning is given if the vehicle goes outside the threshold set for offset from the lane centre.
+                </p>
+            </details>
+            <p> 
+                <div class="card">
+                    <img class="center_image" src="../projects/cu_lane_departure/lane_departure_warning_system.gif" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">Lane Departure Warning System</h3>
+                        <div class="description">
+                            <span> Cranfield University - Connected and Autonomous Vehicle Engineering - Sensor, Perception and Visualisation Assignment</span><br><br>
+                            <b>Steps Involved</b>
+                            <ul>
+                                <li>Lane detection / tracking</li>
+                                <li>Lane status anlysis</li>
+                                <li>Lane augmentation</li>
+                            </ul>
+                        </div><br>
+                        <a href="https://github.com/nirmal-jose/lane_departure_warning_system" rel="noreferrer noopener" target="_blank" class="hover">Github</a>
+                    </div>
+                </div>
+            </p>
+        </li>
+        <li>
+            <a href="#autobeacon">
+            <b id="autobeacon">
+                AutoBeacon
+            </b>
+            </a>
+            <p> 
+                <div class="card">
+                    <img class="center_image" src="../projects/autowiz_autobeacon/crashreport.png" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">Crash Detection</h3>
+                        <div class="description">
+                            <span> A phone based driving behaviour detection application for android with real-time crash detection</span><br><br>
+                            <b>Features</b>
+                            <ul>
+                                <li>IMU and GPS data collection</li>
+                                <li>Real-time Crash Detection</li>
+                            </ul>
+                        </div><br>
+                        <a href="https://www.autowiz.in/autobeacon.html" rel="noreferrer noopener" target="_blank" class="hover">Project Website</a>
+                    </div>
+                </div>
+            </p>
+        </li>
+        <li>
             <a href="#vehicle_inspection">
             <b id="vehicle_inspection">
                 Vehicle Inspection using OBD-II PID Data
             </b>
             </a>
+            <br/><br/>
+            <details>
+                <summary>Summary</summary>
+                <p>
+                    Vehicle Inspection reports are generated from PID data collected for each vehicle for a fixed period, 
+                    say a month. The supported PIDs for each vehicle will be different, so initially, the supported PIDs 
+                    by each vehicle are collected, and then the PID config for vehicle inspection will be generated. The 
+                    significant PID used for inspection is categorised into primary and secondary. The primary PIDs are 
+                    the default ones required for the proper functioning of the telematics device. The secondary PIDs are 
+                    further classified into two depending on their state being a dynamic or static nature. Then the PID 
+                    config files are generated, which will have the primary and secondary PIDs required to collect data 
+                    for vehicle inspection. Most of the vehicles will have more than one config file so that we need to 
+                    rotate PID config files during the period of inspection. The rotating of PID config files is based on 
+                    their importance and the amount of data required for running the vehicle inspection algorithm. Each 
+                    trip across the inspection period will be inspected, and a weighted average on distance traveled will 
+                    be considered an overall rating for the vehicle during the period. Along with PID data, DTC data is 
+                    also collected for the period to show vehicle owners various defects detected by vehicles for better 
+                    maintenance. The battery voltage data is also collected during the period, and battery ratings are 
+                    given based on the voltage post-trip. The vehicle inspection provided ratings and details about fuel 
+                    economy, battery voltage, max power and torque achieved, idle rpm, coolant temperature, engine load 
+                    distribution, charging system (alternator), O2 sensors, and fuel trims, along with distance travelled 
+                    for the period. Along with DTC found during the period, their severity, system info, and distance 
+                    travelled with Malfunction Indication Light (MIL) ON and since clearing DTCs. The inspection report 
+                    is available across the mobile application (as shown in figures below) and in the web app for fleet 
+                    owners. This will give a performance, safety, and maintenance insights to customers on a regular 
+                    basis for keeping their vehicle in good condition. 
+                </p>
+            </details>
             <p>
-                Vehicle Inspection reports are generated from PID data collected for each vehicle for a fixed period, 
-                say a month. The supported PIDs for each vehicle will be different, so initially, the supported PIDs 
-                by each vehicle are collected, and then the PID config for vehicle inspection will be generated. The 
-                significant PID used for inspection is categorised into primary and secondary. The primary PIDs are 
-                the default ones required for the proper functioning of the telematics device. The secondary PIDs are 
-                further classified into two depending on their state being a dynamic or static nature. Then the PID 
-                config files are generated, which will have the primary and secondary PIDs required to collect data 
-                for vehicle inspection. Most of the vehicles will have more than one config file so that we need to 
-                rotate PID config files during the period of inspection. The rotating of PID config files is based on 
-                their importance and the amount of data required for running the vehicle inspection algorithm. Each 
-                trip across the inspection period will be inspected, and a weighted average on distance traveled will 
-                be considered an overall rating for the vehicle during the period. Along with PID data, DTC data is 
-                also collected for the period to show vehicle owners various defects detected by vehicles for better 
-                maintenance. The battery voltage data is also collected during the period, and battery ratings are 
-                given based on the voltage post-trip. The vehicle inspection provided ratings and details about fuel 
-                economy, battery voltage, max power and torque achieved, idle rpm, coolant temperature, engine load 
-                distribution, charging system (alternator), O2 sensors, and fuel trims, along with distance travelled 
-                for the period. Along with DTC found during the period, their severity, system info, and distance 
-                travelled with Malfunction Indication Light (MIL) ON and since clearing DTCs. The inspection report 
-                is available across the mobile application (as shown in figures below) and in the web app for fleet 
-                owners. This will give a performance, safety, and maintenance insights to customers on a regular 
-                basis for keeping their vehicle in good condition. 
-                <br/><br/>
-                <a target="_blank" href="https://www.sensight.in/predictive-maintenance.html"
-                class="hover">
-                    Project Website
-                </a> <br/>
-            </p>
-            <p>             
-                <div class="grid">
-                    <figure>
-                      <img class="center_image" src="../projects/autowiz_vehicle_inspection/inspection_report.png" height="300px">
-                      <a href="../projects/autowiz_vehicle_inspection/inspection_report.png"></a>
-                      <figcaption>Fig. Vehicle Inspection Report (without DTC)</figcaption> 
-                    </figure>
-                    <figure>
-                        <img class="center_image" src="../projects/autowiz_vehicle_inspection/with_DTC.png" height="300px">
-                        <figcaption>Fig. Vehicle Inspection Report (with DTC)</figcaption> 
-                    </figure>
-                    <figure>
-                        <img class="center_image" src="../projects/autowiz_vehicle_inspection/DTC_info.png" height="300px">
-                        <figcaption>Fig. DTC Info</figcaption> 
-                    </figure>
+                <div class="card">
+                    <img src="../projects/autowiz_vehicle_inspection/vehicle_inspection.png" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">Vehicle Inspection</h3>
+                        <div class="description">
+                            <span>Vehicle Inspection using OBD-II PID and DTC data</span><br><br>
+                            <b>Figures</b>
+                            <ul>
+                                <li>Vehicle Inspection Report (without DTC)</li>
+                                <li>Vehicle Inspection Report (with DTC)</li>
+                                <li>DTC Info</li>
+                            </ul>
+                        </div><br><br>
+                        <a href="https://www.sensight.in/predictive-maintenance.html" rel="noreferrer noopener" target="_blank">Project Website</a>
+                    </div>
                 </div>
             </p>
         </li>
@@ -72,33 +135,37 @@
                 AutoVision: Driving Scene Risk Assessment
             </b>
             </a>
+            <br/><br/>
+            <details>
+                <summary>Summary</summary>
+                <p>
+                    The Android application captures 60 Frames during driving events like hard acceleration, sudden braking, overspeeding, 
+                    etc. Later the frames are processed to detect and track interesting objects during the driving scene to find their 
+                    approximate proximity to the vehicle. The frames' objects were detected using the TensorFlow lite model from this  
+                    <a target="_blank" href="https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android"
+                    class="hover">project</a>. 
+                    Interesting class objects were a car, bus, truck, motorcycle, bicycle, and person. The objects were further tracked 
+                    based on a custom tracker depending on their position during the event. The user can later review events captured 
+                    with information about some severity and object that came the closest. The below images shows the event captured 
+                    and processed as mentioned above with details about object class and distance from the source. The second image 
+                    depicts the android application review screen with vital information.
+                </p>
+            </details>
             <p>
-                The Android application captures 60 Frames during driving events like hard acceleration, sudden braking, overspeeding, 
-                etc. Later the frames are processed to detect and track interesting objects during the driving scene to find their 
-                approximate proximity to the vehicle. The frames' objects were detected using the TensorFlow lite model from this  
-                <a target="_blank" href="https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android"
-                class="hover">project</a>. 
-                Interesting class objects were a car, bus, truck, motorcycle, bicycle, and person. The objects were further tracked 
-                based on a custom tracker depending on their position during the event. The user can later review events captured 
-                with information about some severity and object that came the closest. The below images shows the event captured 
-                and processed as mentioned above with details about object class and distance from the source. The second image 
-                depicts the android application review screen with vital information.
-                <br/><br/>
-                <a target="_blank" href="https://www.sensight.in/machine-vision-driving.html"
-                class="hover">
-                    Project Website
-                </a> <br/>
-            </p>
-            <p>             
-                <div class="grid">
-                    <figure>
-                      <img class="center_image" src="../projects/autowiz_autovision/autovision_sample.gif">
-                      <figcaption>Fig. Shows the event captured and processed as mentioned above with details about object class and distance from the source</figcaption>
-                    </figure>
-                    <figure>
-                        <img class="center_image" src="../projects/autowiz_autovision/autovision_android.gif" height="300px">
-                        <figcaption>Fig. Android application review screen with vital information</figcaption>
-                    </figure>
+                <div class="card">
+                    <img src="../projects/autowiz_autovision/autovision.gif" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">Driving Scene Assessment</h3>
+                        <div class="description">
+                            <span> An application to assess driving scene using TensorFlow Lite models</span><br><br>
+                            <b>Features</b>
+                            <ul>
+                                <li>Shows the event captured and processed as mentioned above with details about object class and distance from the source</li>
+                                <li>Android application review screen with vital information</li>
+                            </ul>
+                        </div><br><br>
+                        <a href="https://www.sensight.in/machine-vision-driving.html" rel="noreferrer noopener" target="_blank">Project Website</a>
+                    </div>
                 </div>
             </p>
         </li>
@@ -108,27 +175,35 @@
                 TurboCharger Fault Detection
             </b>
             </a>
-            <p>
-                Detection of TurboCharger failure or malfunction using PID data and DTC info. The PID data were collected 
-                from the vehicle CAN network using OBD II protocols and telematics devices from various vehicles. 
-                The TurboCharger performance was evaluated based on the amount of pressure created inside the intake 
-                manifold using Intake Air Temperature (IAT) & Manifold Absolute Pressure or Mass Air Flow (MAF) sensor 
-                depending on their availability. The value of these quantities where further binned based on Engine RPM and 
-                MAF. Reference data for comparison were built by taking the median value for each bin collected across the 
-                same make-model, which doesn't have any DTC related to TurboCharger. The bin values' euclidean distance was 
-                taken to compare between vehicle and reference, with some threshold. The below images depicts the study 
-                carried out between reference data & defective vehicle, and the same vehicle before and after DTC occurrence.
-            </p>
-            <p>             
-                <div class="grid">
-                    <figure>
-                      <img src="../projects/autowiz_turbocharger/turbocharger_cross_vehicle.png">
-                      <figcaption>Fig. Cross Vehicle comparisson of Intake Manifold Pressure before and after DTC</figcaption> 
-                    </figure>
-                    <figure>
-                        <img src="../projects/autowiz_turbocharger/turbocharger_cross_model.png">
-                        <figcaption>Fig. Cross Model comparisson of Intake Manifold Pressure across vehicle with and without DTC</figcaption> 
-                    </figure>
+            <br/><br/>
+            <details>
+                <summary>Summary</summary>
+                <p>
+                    Detection of TurboCharger failure or malfunction using PID data and DTC info. The PID data were collected 
+                    from the vehicle CAN network using OBD II protocols and telematics devices from various vehicles. 
+                    The TurboCharger performance was evaluated based on the amount of pressure created inside the intake 
+                    manifold using Intake Air Temperature (IAT) & Manifold Absolute Pressure or Mass Air Flow (MAF) sensor 
+                    depending on their availability. The value of these quantities where further binned based on Engine RPM and 
+                    MAF. Reference data for comparison were built by taking the median value for each bin collected across the 
+                    same make-model, which doesn't have any DTC related to TurboCharger. The bin values' euclidean distance was 
+                    taken to compare between vehicle and reference, with some threshold. The below images depicts the study 
+                    carried out between reference data & defective vehicle, and the same vehicle before and after DTC occurrence.
+                </p>
+            </details> 
+            <p> 
+                <div class="card">
+                    <img src="../projects/autowiz_turbocharger/turbo_charger.png" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">TurboCharger Fault Detection</h3>
+                        <div class="description">
+                            <span>Fault detection in turbo charger using OBD-II PID and DTC data</span><br><br>
+                            <b>Figures</b>
+                            <ul>
+                                <li>Cross Vehicle comparisson of Intake Manifold Pressure before and after DTC</li>
+                                <li>Cross Model comparisson of Intake Manifold Pressure across vehicle with and without DTC</li>
+                            </ul>
+                        </div><br><br>
+                    </div>
                 </div>
             </p>
         </li>
@@ -138,35 +213,40 @@
                 Gear Shift Recommendation
             </b>
             </a>
-            <p>
-                Gear Shift recommendation for vehicle owners was provided based on their shifting behaviour using 
-                Speed and Engine RPM data. The PID data were collected from the vehicle CAN network using OBD II 
-                protocols and telematics devices from various vehicles. The speed and rpm data collected were used 
-                to find various gear ratios; these values were further binned to respective gears using the K-means 
-                clustering technique. The reference speed limits for each make-model and gears were collected from 
-                a massive dataset of speed-rpm data across various drivers. The speed limits were decided based on 
-                upper and lower percentile values across the data for respective gears. Further, the boundaries were 
-                smoothened to avoid gaps and smoother transmission.</br></br>
-                Each driver was compared across gears and respective speed limits. The instance of wrong gears was 
-                found and further classified these occurrences into acceleration or deceleration conditions. The 
-                most predominant recommendation found were provided to the customer, as shown below in Fig. Gear 
-                Shift Recommendation Card. The below also depicts the K-means Clustering technique for finding gears 
-                and representation of gear utilisation by a particular driver.
-            </p>
-            <p>             
-                <div class="grid">
-                    <figure>
-                      <img src="../projects/autowiz_gear_recommendation/clustering_gears.png">
-                      <figcaption>Fig. Gear Clusters</figcaption> 
-                    </figure>
-                    <figure>
-                        <img src="../projects/autowiz_gear_recommendation/gear_utilization.png">
-                        <figcaption>Fig. Gear Utilization</figcaption> 
-                    </figure>
-                    <figure>
-                        <img src="../projects/autowiz_gear_recommendation/gear_shift_recommendation.png">
-                        <figcaption>Fig. Gear Shift Recommendation Card</figcaption> 
-                    </figure>
+            <br/><br/>
+            <details>
+                <summary>Summary</summary>
+                <p>
+                    Gear Shift recommendation for vehicle owners was provided based on their shifting behaviour using 
+                    Speed and Engine RPM data. The PID data were collected from the vehicle CAN network using OBD II 
+                    protocols and telematics devices from various vehicles. The speed and rpm data collected were used 
+                    to find various gear ratios; these values were further binned to respective gears using the K-means 
+                    clustering technique. The reference speed limits for each make-model and gears were collected from 
+                    a massive dataset of speed-rpm data across various drivers. The speed limits were decided based on 
+                    upper and lower percentile values across the data for respective gears. Further, the boundaries were 
+                    smoothened to avoid gaps and smoother transmission.</br></br>
+                    Each driver was compared across gears and respective speed limits. The instance of wrong gears was 
+                    found and further classified these occurrences into acceleration or deceleration conditions. The 
+                    most predominant recommendation found were provided to the customer, as shown below in Fig. Gear 
+                    Shift Recommendation Card. The below also depicts the K-means Clustering technique for finding gears 
+                    and representation of gear utilisation by a particular driver.
+                </p>
+            </details> 
+            <p>      
+                <div class="card">
+                    <img src="../projects/autowiz_gear_recommendation/gear_recommendation.png" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">Gear Shift Recommendation</h3>
+                        <div class="description">
+                            <span>Gear Shift recommendation using OBD-II PID data</span><br><br>
+                            <b>Figures</b>
+                            <ul>
+                                <li>Gear Shift Recommendation Card</li>
+                                <li>Gear Clusters</li>
+                                <li>Gear Shift Recommendation Card</li>
+                            </ul>
+                        </div><br><br>
+                    </div>
                 </div>
             </p>
         </li>
@@ -176,6 +256,23 @@
                 0D Combustion Modeling of Compression Ignition Engines Using Python
             </b>
             </a>
+            <br/><br/>
+            <details>
+                <summary>Abstract</summary>
+                <p>
+                    The present study develops a single-zone zero-dimensional progressive combustion simulation model 
+                    using Python programming language for compression ignition engines. The model is capable of predicting 
+                    in-cylinder pressure, heat release rate, engine performance, and emissions characteristics. 
+                    The numerical model is experimentally validated using resuts from engine testing for diesel, 
+                    Pongamia Pinnata biodiesel and diesel-biodiesel blends. The chemical composition of fuel is identified 
+                    using Gas Chromatography-Mass Spectrometry. The values of power output, mean effective pressure and 
+                    exhaust oxygen concentration are independently obtained from the numerical model and from the experiments. 
+                    The engine performance is not significantly affected for biodiesel to diesel blending ratio of up to 30%. 
+                    A higher oxygen concentration in the exhaust gas is observed with increase in blending ratio. 
+                    The developed numerical model would be useful in studying the performance and emission characteristics 
+                    for any alternative fuel with known calorific value and chemical composition.
+                </p>
+            </details> 
             <p>
                 Modeling Compression Ignition Combustion using Zero-Dimensional 
                 Model for
@@ -186,20 +283,21 @@
                 class="hover">
                     See Publication
                 </a> <br/>
-                
-                <div class="grid">
-                    <figure>
-                      <img src="../projects/cufe_combustion_modeling/combustion_modeling_schematic_diagram.png" height="290px">
-                      <figcaption>Fig. Schematic Diagram of Experimental Setup</figcaption> 
-                    </figure>
-                    <figure>
-                        <img src="../projects/cufe_combustion_modeling/combustion_modeling_p-theta.png">
-                        <figcaption>Fig. P-Theta Diagram</figcaption> 
-                    </figure>
-                    <figure>
-                    <img src="../projects/cufe_combustion_modeling/combustion_modeling_power-load.png">
-                    <figcaption>Fig. Power Vs Load for Diesel, Diesel-Biodiesel and Biodiesel blends</figcaption> 
-                    </figure>
+                <div class="card">
+                    <img src="../projects/cufe_combustion_modeling/combustion_modelling.png" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">0D Combustion Modeling</h3>
+                        <div class="description">
+                            <span>0D combustion simulation for IC Engines using Python</span><br><br>
+                            <b>Figures</b>
+                            <ul>
+                                <li>Schematic Diagram of Experimental Setup</li>
+                                <li>P-Theta Diagram</li>
+                                <li>Power Vs Load for Diesel, Diesel-Biodiesel and Biodiesel blends</li>
+                            </ul>
+                        </div><br><br>
+                        <a href="https://doi.org/10.1080/01430750.2020.1831596" rel="noreferrer noopener" target="_blank">See Publication</a>
+                    </div>
                 </div>
             </p>
         </li>
@@ -209,10 +307,51 @@
                 Ethanol Extraction from Bamboo Biomass
             </b>
             </a>
+            <br/><br/>
+            <details>
+                <summary>Summary</summary>
+                <p>
+                    Bioethanol extraction from bamboo biomass comprises of different steps of pretreatment, enzymatic hydrolysis, 
+                    fermentation, and distillation. Production of fermentable sugars out of biomass also depends on various factors 
+                    like biomass composition, pretreatment methodology, the efficiency of enzymatic hydrolysis. Primary components 
+                    of plant biomass are cellulose – main structural polymer, hemicellulose – heteropolymer present along with 
+                    cellulose, and lignin – complex organic polymer providing key structural strength. The first step in bioethanol 
+                    extraction is pretreatment, it’s a very crucial step which intends in altering the structural characteristics 
+                    of biomass for increasing the availability of polymers for hydrolyzing enzymes. This is achieved by the removal 
+                    of either hemicellulose or lignin fractions from the biomass. Pretreatment methods are mainly classified into 
+                    physical, chemical, physiochemical and biological techniques which have been established and used in the past 
+                    decades for bioethanol extraction. Generally, pretreatment involves high-temperature treatment with dilute 
+                    alkali or acid. Alkali pretreatment remains to be most desirable as it retains cellulose and hemicellulose, 
+                    meanwhile removing a major portion of lignin in the solid. The second step is enzymatic hydrolysis, 
+                    during which sugar polymers like cellulose and hemicellulose are hydrolyzed to release free sugar monomers. 
+                    Enzymatic hydrolysis is preferable over chemical hydrolysis carried out mostly by acid due to its specificity, 
+                    mild operational conditions, and lesser or no byproduct formation. The third step is fermentation, 
+                    conversion of fermentable sugars formed after enzymatic hydrolysis to ethanol using microorganisms or biocatalyst.
+                </p>
+            </details> 
             <p>
                 Setting up production setup for Bio-Ethanol extraction from Bamboo Biomass
                 by Pretreatment, <br/>Enzymatic Saccharification and Fermentation.<br>
                 June 2018 - July 2019
+                <br/>
+                <div class="card">
+                    <img src="../projects/cufe_biomass_ethanol/ethanol_biomass.png" alt="FlorisBoard preview">
+                    <div class="info">
+                        <h3 style="text-align:center;">Bioethanol from Bamboo Biomass Production Setup</h3>
+                        <div class="description">
+                            <span> Setting up production setup for Bio-Ethanol extraction from Bamboo Biomass.</span><br><br>
+                            <b>Bioethanol extraction process from Bamboo biomass,</b>
+                            <ul>
+                                <li>Sample Preparation - bamboo samples where milled, grinded and air dried</li>
+                                <li>Compositional Analysis - Chemical composition of raw and pretreated biomass were analysed by gravimetric method</li>
+                                <li>Dilute Alkali Pretreatment</li>
+                                <li>Enzymatic Saccharification - using cellulase obtained from Zytex Group, Supercut Acid Cellulase. 
+                                    Optimised using Central Composite Design (CCD) and Response Surface Methodology (RSM)</li>
+                                <li>Ethanol Production – using Saccharomyces Cerevisiae</li>
+                            </ul>
+                        </div><br><br>                
+                    </div>
+                </div>
             </p>
         </li>
     </ul>
