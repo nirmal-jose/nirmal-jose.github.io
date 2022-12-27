@@ -21,10 +21,25 @@
             </a>
             <br/><br/>
             <details>
-                <summary>Summary</summary>
+                <summary>Abstract</summary>
                 <p>
-                    Design unified motion planning algorithm for urban driving using rule based behaviour planning and 
-                    polynomial spiral for path planning.
+                    This study aims to develop a unified motion planning algorithm for autonomous 
+                    vehicles to navigate urban environments following traffic rules. A hierarchical 
+                    motion planning framework divides the workload of navigating a vehicle to a 
+                    destination through a structured road network. Mission planning uses A* search 
+                    with distance heuristics to find the global route. A rule-based behaviour planner 
+                    makes decisions considering traffic rules and obstacles, setting a goal state for 
+                    the local planner. The local planner generates paths to reach the goal state,
+                    generating kinematically feasible and collision-free paths using polynomial spiral 
+                    optimisation and circle-based collision checking algorithms. The velocity profile 
+                    generation method generates the trajectory according to selected behaviour
+                    providing waypoints and velocity at each point along the best path to be followed 
+                    by the vehicle control module. The developed framework was verified and 
+                    validated using the Carla simulator for various urban scenarios making 
+                    improvements to the baseline implementation. The study also explores the 
+                    importance of interaction between behaviour and the local planning layer, which 
+                    could be improved by providing a feedback loop for handling undesirable 
+                    situations.
                 </p>
             </details>
             <p> 
