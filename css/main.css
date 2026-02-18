@@ -1,58 +1,68 @@
-
 img.rounded {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-  }
-  
-  body{
-      background: #000;
-      color: #EEE;
-      height: 100%;
-  }
-  
-  img.roundedsmall {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-  }
-  
-  h2{  
-    font-size: 20px;
-  }
-  h3{
-    font-size: 18px;
-  }
-  p{
-    font-size: 18px;
-  }
-  b{
-    font-size: 18px;
-  }
-  ul{
-    margin-bottom: 1.5px;
-  }
-  a:hover{
-    text-decoration: underline;
-    color:#ffffff;}
-  a {text-decoration: none; color:rgb(62, 198, 240)}
-
-  div {
-   display: inline-block;
-   position: relative;
-   z-index : 1;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
 }
-div img { display: block; }
-div + img { position: absolute; z-index: 1; top: 50px; left: 20px; }
+
+body {
+  background: #000;
+  color: #eee;
+  height: 100%;
+}
+
+img.roundedsmall {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 18px;
+}
+p {
+  font-size: 18px;
+}
+b {
+  font-size: 18px;
+}
+ul {
+  margin-bottom: 1.5px;
+}
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: rgb(62, 198, 240);
+}
+
+div {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+div img {
+  display: block;
+}
+div + img {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 20px;
+}
 input {
   padding: 10px 10px;
-  margin-right:2%;
+  margin-right: 2%;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
   background-color: rgb(62, 198, 240);
   border-radius: 6px;
   outline: none;
-  position:fixed;
+  position: fixed;
   right: 0;
 }
