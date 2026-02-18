@@ -1,6 +1,8 @@
 img.rounded {
-  height: 200px;
   width: 200px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
 
