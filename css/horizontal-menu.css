@@ -1,28 +1,29 @@
-ol,ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
 #mainMenu {
-    margin: 10px;
-    overflow: auto;
-    font-size: 18px;
+  margin: 10px;
+  overflow: auto;
+  font-size: 18px;
 }
 
 #mainMenu li {
-    display:block;
-    margin-left: 20px;
-	float:left;
+  display: block;
+  margin-left: 20px;
+  float: left;
 }
 
 #mainMenu a {
-	display:block;
-	padding:5px;
-	text-decoration:none;
-	background-color:rgb(0, 0, 0);
-    color:rgb(62, 198, 240);
-    float: left;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
+  color: rgb(62, 198, 240);
+  float: left;
 }
 
 #mainMenu a:hover {
-	color:#fff;
+  color: #fff;
 }
