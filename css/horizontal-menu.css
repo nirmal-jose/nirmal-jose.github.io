@@ -4,8 +4,10 @@ ul {
 }
 
 #mainMenu {
+  display: flex;
   margin: 10px;
-  overflow: auto;
+  flex-wrap: wrap;
+  gap: 15px;
   font-size: 18px;
 }
 
@@ -17,7 +19,7 @@ ul {
 
 #mainMenu a {
   display: block;
-  padding: 5px;
+  padding: 5px 10px;
   text-decoration: none;
   background-color: rgb(0, 0, 0);
   color: rgb(62, 198, 240);
