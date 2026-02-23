@@ -135,6 +135,11 @@ input {
     padding: 40px;
   }
 }
+@media (min-width: 1200px) {
+  .home-btn {
+    right: calc((100vw - 1100px) / 2 + 20px);
+  }
+}
 
 .container {
   max-width: 1100px;
@@ -176,8 +181,7 @@ input {
 .home-btn {
   position: fixed;
   top: 20px;
-  right: 20px;
-  z-index: 1000;
+  right: 20px;   /* Default safe value */
 
   padding: 10px 18px;
   width: auto;
@@ -191,6 +195,7 @@ input {
   border-radius: 6px;
   border: none;
 
+  z-index: 1000;
   transition: all 0.2s ease;
 }
 
@@ -198,4 +203,14 @@ input {
   background-color: #ffffff;
   color: #000;
   transform: scale(1.05);
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-list > li {
+  margin-bottom: 60px;
 }
