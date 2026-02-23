@@ -1,66 +1,92 @@
-img.rounded {
-  width: 200px;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: #000;
   color: #eee;
-  height: 100%;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
-img.roundedsmall {
-  height: 30px;
-  width: 30px;
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img.rounded {
+  width: 200px;
+  max-width: 80%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
 
-h2 {
-  font-size: 20px;
+img.roundedsmall {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
-h3 {
-  font-size: 18px;
-}
-p {
-  font-size: 18px;
-}
-b {
-  font-size: 18px;
-}
+
+/* Typography */
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+p  { font-size: 1rem; }
+
+/* Lists */
 ul {
-  margin-bottom: 1.5px;
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
 }
-a:hover {
-  text-decoration: underline;
-  color: #ffffff;
-}
+
+/* Links */
 a {
   text-decoration: none;
   color: rgb(62, 198, 240);
 }
 
-div img {
-  display: block;
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
 }
-div + img {
-  position: absolute;
-  z-index: 1;
-  top: 50px;
-  left: 20px;
+
+a:focus {
+  outline: 2px solid rgb(62, 198, 240);
+  outline-offset: 2px;
 }
+
+/* Buttons / Inputs */
 input {
-  padding: 10px 10px;
-  margin-right: 2%;
+  padding: 12px;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
-  text-decoration: none;
   color: #ffffff;
   background-color: rgb(62, 198, 240);
   border-radius: 6px;
-  outline: none;
-  position: static;
-  display: inline-block;
-  margin-top: 10px;
+  border: none;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+
+  img.rounded {
+    width: 150px;
+  }
+
+  body {
+    padding: 10px;
+  }
 }
