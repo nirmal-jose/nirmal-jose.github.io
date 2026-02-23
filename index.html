@@ -1,47 +1,106 @@
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nirmal Jose</title>
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/horizontal-menu.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
-</head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arvo" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
+  </head>
 
-<header style="text-align:center">
-    <div id="mainMenu" style="text-align:center">
-        <nav> 
-            <ul> 
-                <li><a href="./assets/pages/work_experience.html">Professional Experience</a></li> 
-                <li><a href="./assets/pages/projects.html">Projects</a></li> 
-                <!-- <li><a href="./assets/pages/training_certification.html">Professional Training and Certifications</a></li>  -->
-                <li><a href="./assets/pages/skills_tools.html">Skills & Tools</a></li> 
-                <li><a href="./assets/pages/education.html">Education</a></li> 
-                <li><a href="./assets/pages/publication.html">Publications</a></li>
-            </ul> 
-        </nav> 
+  <body>
+    <header style="text-align: center">
+      <div id="mainMenu">
+        <nav>
+          <ul>
+            <li>
+              <a href="./assets/pages/work_experience.html"
+                >Professional Experience</a
+              >
+            </li>
+            <li><a href="./assets/pages/projects.html">Projects</a></li>
+            <!-- <li><a href="./assets/pages/training_certification.html">Professional Training and Certifications</a></li> -->
+            <li>
+              <a href="./assets/pages/skills_tools.html">Skills & Tools</a>
+            </li>
+            <li><a href="./assets/pages/education.html">Education</a></li>
+            <li><a href="./assets/pages/publication.html">Publications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container" style="text-align: center; padding: 20px">
+      <div
+        style="
+          position: relative;
+          height: 350px;
+          overflow: hidden;
+          margin-bottom: 40px;
+        "
+      >
+        <!-- Cover Image -->
+        <img
+          src="./assets/index_cover.jpg"
+          alt="Cover Image"
+          style="width: 100%; height: 100%; object-fit: cover"
+        />
+
+        <!-- Profile Picture -->
+        <img
+          src="./assets/profile_pic.jpg"
+          alt="Profile Picture"
+          style="
+            position: absolute;
+            left: 20px; /* distance from left edge */
+            top: 50%; /* vertically center */
+            transform: translateY(-50%); /* center vertically */
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #fff; /* optional border for contrast */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          "
+        />
+      </div>
+      <div
+        style="
+          display: flex; /* horizontal layout */
+          justify-content: center; /* center icons horizontally */
+          align-items: center; /* vertically align if needed */
+          gap: 15px; /* space between icons */
+          padding: 10px;
+          margin-bottom: 20px;
+        "
+      >
+        <a target="_blank" href="https://t.me/nirmal_jose">
+          <img src="./assets/telegram_logo.png" alt="Telegram" width="30" />
+        </a>
+        <a href="mailto:mailnirmaljose@gmail.com">
+          <img src="./assets/mail_logo.png" alt="Email" width="30" />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/-nirmal-jose/">
+          <img src="./assets/linkedin_logo.png" alt="LinkedIn" width="30" />
+        </a>
+        <a target="_blank" href="https://github.com/nirmal-jose">
+          <img src="./assets/github_logo.png" alt="GitHub" width="30" />
+        </a>
+      </div>
+
+      <p
+        style="
+          text-align: center;
+          font-style: italic;
+          max-width: 600px;
+          margin: auto;
+        "
+      >
+        "Learning is a career-long and lifelong endeavour, therefore, always
+        being a student."
+      </p>
     </div>
-    
-</header>
-
-<center>
-    <div>
-        <div style="height: 350px; overflow: hidden">
-            <img src="./assets/index_cover.jpg" alt="kpmg"/>
-        </div>
-        <img src="./assets/profile_pic.jpg" class="rounded" />
-    </div>  
-</center>
-
-<center style="padding: 10px; margin-left: 20px;">
-    <a target="_blank" href="https://t.me/nirmal_jose">
-    <img src="./assets/telegram_logo.png" alt="mail" width="30" class="center"></a>
-    <a href="mailto:mailnirmaljose@gmail.com">
-    <img src="./assets/mail_logo.png" alt="mail" width="30" class="center"></a>
-    <a target="_blank" href="https://www.linkedin.com/in/-nirmal-jose/">
-    <img src="./assets/linkedin_logo.png" alt="linkedin" width="30" class="center"/></a>
-    <a target="_blank" href="https://github.com/nirmal-jose">
-    <img src="./assets/github_logo.png" alt="github" width="30" class="center"/></a>
-</center>
-
-<p style="text-align:center">
-    "Learning is a career-long and lifelong endeavour, therefore, always being a student."
-</p>
+  </body>
+</html>

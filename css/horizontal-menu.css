@@ -8,18 +8,24 @@ ul {
 
 /* Main Menu Container */
 #mainMenu {
-  display: flex;
-  justify-content: center;   /* center menu */
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  text-align: center;
   margin: 10px 0;
-  font-size: 1.1rem;
 }
 
-/* Remove float completely */
-#mainMenu li {
+/* Make the <ul> horizontal */
+#mainMenu ul {
+  display: flex;               /* horizontal layout */
+  justify-content: center;     /* center items */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;                   /* spacing between menu items */
+  padding: 0;
   margin: 0;
+}
+
+/* Menu items */
+#mainMenu li {
+  margin: 0;                   /* remove default li margin */
 }
 
 /* Menu Links */
@@ -40,10 +46,11 @@ ul {
   background-color: rgb(62, 198, 240);
 }
 
+/* Mobile */
 @media (max-width: 768px) {
 
-  #mainMenu {
-    flex-direction: column;
+  #mainMenu ul {
+    flex-direction: column;   /* stack vertically on mobile */
     align-items: stretch;
   }
 
