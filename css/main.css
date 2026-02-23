@@ -87,32 +87,42 @@ input {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+
   h2 {
     font-size: 1.3rem;
   }
+
   h3 {
     font-size: 1.1rem;
   }
 
-  .img.rounded {
+  img.rounded {   /* remove the dot before img */
     width: 150px;
   }
 
-  .body {
+  body {          /* remove the dot before body */
     padding: 10px;
   }
 
   .experience-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;   /* ✅ ONE column on mobile */
   }
+
   .home-btn {
     top: 15px;
     right: 15px;
     padding: 8px 14px;
     font-size: 0.9rem;
   }
+}
+@media (min-width: 992px) {
+
+  .experience-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 columns */
+    gap: 20px;
+  }
+
 }
 
 /* Desktop adjustments */
@@ -141,6 +151,10 @@ input {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;   /* ONE column by default */
+  gap: 20px;
 }
 
 .job {
