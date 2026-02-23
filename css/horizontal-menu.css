@@ -1,28 +1,109 @@
-ol,ul {
-	list-style: none;
+/* Remove bullets globally for menus */
+#mainMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* Main Menu Container */
 #mainMenu {
-    margin: 10px;
-    overflow: auto;
-    font-size: 18px;
+  position: fixed;       /* fixed so always on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
+/* Horizontal menu for desktop */
+#mainMenu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Menu items */
 #mainMenu li {
-    display:block;
-    margin-left: 20px;
-	float:left;
+  margin: 0;
 }
 
+/* Menu Links */
 #mainMenu a {
-	display:block;
-	padding:5px;
-	text-decoration:none;
-	background-color:rgb(0, 0, 0);
-    color:rgb(62, 198, 240);
-    float: left;
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  background-color: #000;
+  color: rgb(62, 198, 240);
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#mainMenu a:hover {
-	color:#fff;
+/* Hover + Focus */
+#mainMenu a:hover,
+#mainMenu a:focus {
+  color: #fff;
+  background-color: rgb(62, 198, 240);
+}
+
+/* Highlight active menu item */
+#mainMenu a.active {
+  background-color: rgb(62, 198, 240);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Hamburger toggle button (mobile only) */
+#mainMenu .menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: #000;
+  color: rgb(62, 198, 240);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+#mainMenu .menu-toggle:focus {
+  outline: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+  /* Show hamburger button */
+  #mainMenu .menu-toggle {
+    display: block;
+  }
+
+  /* Menu hidden by default */
+  #mainMenu ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  /* Show menu when toggled */
+  #mainMenu ul.show {
+    display: flex;
+    position: absolute;
+    top: 100%;  /* just below header */
+    left: 0;
+    background-color: #000;
+    padding: 10px 0;
+  }
+
+  /* Menu links full width on mobile */
+  #mainMenu a {
+    text-align: center;
+    width: 100%;
+  }
 }

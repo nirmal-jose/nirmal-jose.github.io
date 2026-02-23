@@ -1,48 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nirmal Jose | Publications</title>
     <link rel="stylesheet" type="text/css" href="../../css/main.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arvo" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../../css/horizontal-menu.css" />
 </head>
 
 <body>
-    <input type=button onClick="parent.location='../../index.html'" value='Home'>
-</body>
-
-<h1 style="text-align: center">Publications</h1>
-<body>
+    <header>
+      <div id="mainMenu">
+        <button class="menu-toggle">&#9776;</button>
+        <!-- Hamburger Icon -->
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/assets/pages/work_experience.html">Professional Experience</a></li>
+            <li><a href="/assets/pages/projects.html">Projects</a></li>
+            <li><a href="/assets/pages/skills_tools.html">Skills & Tools</a></li>
+            <li><a href="/assets/pages/education.html">Education</a></li>
+            <li><a href="/assets/pages/publication.html">Publications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <div class="container">
     <ul type="disc">
         <li>
-            <b>A Study of Diesel and Pongamia Pinnata Biodiesel Combustion in 
-            Compression Ignition Engines <br/>using Zero-Dimensional Modelling and 
-            Experimental Methods
+            <b>
+                A Study of Diesel and Pongamia Pinnata Biodiesel Combustion in 
+                Compression Ignition Engines <br />
+                using Zero-Dimensional Modelling and Experimental Methods
             </b>
             <p>
                 The study develops a single zone zero-dimensional progressive 
-                combustion simulation model <br/>using Python programming language for 
-                compression ignition engines fueled by diesel, <br/>
-                Pongamia Pinatta biodiesel and diesel - biodiesel blends. <br/>
-                <a target="_blank" href="https://doi.org/10.1080/01430750.2020.1831596"
-                class="hover">
+                combustion simulation model <br />
+                using Python programming language for compression ignition engines fueled by diesel, <br />
+                Pongamia Pinatta biodiesel and diesel - biodiesel blends. <br />
+                <a target="_blank" href="https://doi.org/10.1080/01430750.2020.1831596" class="hover">
                     See Publication
-                </a> <br/>
+                </a><br />
                 1 October 2020
             </p>
         </li>
         <li>
-            <b>Maximised bioethanol extraction from bamboo biomass through alkali pretreatment 
-            and enzymatic <br/>saccharification by application of ANN-NSGA-II-based optimisation 
-            method
+            <b>
+                Maximised bioethanol extraction from bamboo biomass through alkali pretreatment 
+                and enzymatic <br />
+                saccharification by application of ANN-NSGA-II-based optimisation method
             </b>
             <p>
                 The extraction process for bioethanol from bamboo involves alkali pretreatment, 
-                enzymatic saccharification, <br/>and ethanol production. <br/>
-                <a target="_blank" href="https://doi.org/10.1007/s10668-023-04209-6"
-                class="hover">
+                enzymatic saccharification, <br />
+                and ethanol production. <br />
+                <a target="_blank" href="https://doi.org/10.1007/s10668-023-04209-6" class="hover">
                     See Publication
-                </a> <br/>
+                </a><br />
                 30 November 2023
             </p>
         </li>
     </ul>
+
+  </div>
+  <script>
+      const toggleButton = document.querySelector("#mainMenu .menu-toggle");
+      const menu = document.querySelector("#mainMenu ul");
+
+      toggleButton.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+
+      // Highlight current page
+      const menuLinks = document.querySelectorAll("#mainMenu a");
+      const currentPath = window.location.pathname.split("/").pop();
+
+      menuLinks.forEach((link) => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+        if (linkPath === currentPath) {
+          link.classList.add("active");
+        }
+      });
+    </script>
 </body>
+</html>
