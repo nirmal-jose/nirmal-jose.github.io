@@ -10,19 +10,27 @@
     <link rel="stylesheet" href="../../css/gallery-grid.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arvo">
     <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/horizontal-menu.css" />
 </head>
 
 <body>
-
+<header>
+    <div id="mainMenu">
+    <button class="menu-toggle">&#9776;</button>
+    <!-- Hamburger Icon -->
+    <nav>
+        <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/assets/pages/work_experience.html">Professional Experience</a></li>
+        <li><a href="/assets/pages/projects.html">Projects</a></li>
+        <li><a href="/assets/pages/skills_tools.html">Skills & Tools</a></li>
+        <li><a href="/assets/pages/education.html">Education</a></li>
+        <li><a href="/assets/pages/publication.html">Publications</a></li>
+        </ul>
+    </nav>
+    </div>
+</header>
 <div class="container">
-
-    <input type="button"
-           onclick="window.location.href='../../index.html'"
-           value="Home"
-           class="home-btn">
-
-    <h1 class="page-title">Projects</h1>
-
     <ul class="projects-list">
         <li>
             <a href="#certus">
@@ -724,5 +732,24 @@
      </ul>
 
 </div>
+ <script>
+    const toggleButton = document.querySelector("#mainMenu .menu-toggle");
+    const menu = document.querySelector("#mainMenu ul");
+
+    toggleButton.addEventListener("click", () => {
+    menu.classList.toggle("show");
+    });
+
+    // Highlight current page
+    const menuLinks = document.querySelectorAll("#mainMenu a");
+    const currentPath = window.location.pathname.split("/").pop();
+
+    menuLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href").split("/").pop();
+    if (linkPath === currentPath) {
+        link.classList.add("active");
+    }
+    });
+</script>
 </body>
 </html>
