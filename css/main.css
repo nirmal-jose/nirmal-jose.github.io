@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -14,7 +15,7 @@ body {
   color: #eee;
   line-height: 1.6;
   min-height: 100vh;
-  font-family: 'Arvo', serif;
+  font-family: "Arvo", serif;
 }
 
 /* Images */
@@ -38,9 +39,15 @@ img.roundedsmall {
 }
 
 /* Typography */
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.2rem; }
-p  { font-size: 1rem; }
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1rem;
+}
 
 /* Lists */
 ul {
@@ -80,8 +87,12 @@ input {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1.1rem; }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
 
   .img.rounded {
     width: 150px;
@@ -96,10 +107,16 @@ input {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+  .home-btn {
+    top: 15px;
+    right: 15px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
 }
 
+/* Desktop adjustments */
 @media (min-width: 1024px) {
-
   .experience-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -107,7 +124,6 @@ input {
   .container {
     padding: 40px;
   }
-
 }
 
 .container {
@@ -132,7 +148,9 @@ input {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   border: 1px solid #1f1f1f;
 }
 
@@ -142,9 +160,24 @@ input {
 }
 
 .home-btn {
-  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  padding: 10px 18px;
+  width: auto;
+  max-width: none;
+
   font-weight: bold;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+
+  background-color: rgb(62, 198, 240);
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+
+  transition: all 0.2s ease;
 }
 
 .home-btn:hover {
