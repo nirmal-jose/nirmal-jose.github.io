@@ -1,52 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nirmal Jose | Work Experience</title>
-    <link rel="stylesheet" type="text/css" href="../../css/main.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Arvo">
     <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/horizontal-menu.css" />
 </head>
 
 <body>
-    <input type=button onClick="parent.location='../../index.html'" value='Home'>
-</body>
+     <header>
+      <div id="mainMenu">
+        <button class="menu-toggle">&#9776;</button>
+        <!-- Hamburger Icon -->
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/assets/pages/work_experience.html">Professional Experience</a></li>
+            <li><a href="/assets/pages/projects.html">Projects</a></li>
+            <li><a href="/assets/pages/skills_tools.html">Skills & Tools</a></li>
+            <li><a href="/assets/pages/education.html">Education</a></li>
+            <li><a href="/assets/pages/publication.html">Publications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+        <ul class="experience-list">
 
-<h1 style="text-align: center">Professional Experience</h1>
-<body>
-    <ul type="disc">
-        <li>
-            <b>Engineer - Connected Autonomous Vehicle</b>
-            <p>
-                HORIBA MIRA  
-                (<a target="_blank" href="https://www.horiba-mira.com/connected-autonomous-vehicles/"class="hover">
-                    HORIBA MIRA - CAV
-                </a>)
-                <br>
-                Nuneaton, United Kingdom<br>Apr 2023 - Present
-            </p>
-        </li>
-        <li>
-            <b>Research Analyst</b>
-            <p>
-                SBD Automotive Ltd  
-                (<a target="_blank" href="https://www.sbdautomotive.com/"class="hover">
-                    SBD Automotive
-                </a>)
-                <br>
-                Milton Keynes, United Kingdom<br>Sep 2022 - Mar 2023
-            </p>
-        </li>
-        <li>
-            <b>Engineer (Vehicle Data Analysis)</b>
-            <p>
-                Sensight Technologies Private Limited 
-                (<a target="_blank" href="https://autowiz.in/"class="hover">
-                    AutoWiz
-                </a>)
-                <br>
-                Bangalore, India<br>August 2019 - August 2021
-            </p>
-        </li>
-        <li>
-            <b>Project Fellow</b>
+            <li class="job">
+                <h3>Project Engineer - Connected Autonomous Vehicle</h3>
+                <p>
+                    HORIBA MIRA  
+                    (<a target="_blank" href="https://www.horiba-mira.com/connected-autonomous-vehicles/">
+                        HORIBA MIRA - CAV
+                    </a>)<br>
+                    Nuneaton, United Kingdom<br>
+                    Apr 2023 - Present
+                </p>
+            </li>
+
+            <li class="job">
+                <h3>Research Analyst</h3>
+                <p>
+                    SBD Automotive Ltd  
+                    (<a target="_blank" href="https://www.sbdautomotive.com/">
+                        SBD Automotive
+                    </a>)<br>
+                    Milton Keynes, United Kingdom<br>
+                    Sep 2022 - Mar 2023
+                </p>
+            </li>
+
+            <li class="job">
+                <h3>Engineer (Vehicle Data Analysis)</h3>
+                <p>
+                    Sensight Technologies Pvt Ltd  
+                    (<a target="_blank" href="https://autowiz.in/">
+                        AutoWiz
+                    </a>)<br>
+                    Bangalore, India<br>
+                    Aug 2019 - Aug 2021
+                </p>
+            </li>
+
+            <li  class="job">
+            <h3>Project Fellow</h3>
             <p>
                 Christ University, 
                 Department of Mechanical and Automobile Engineering <br>
@@ -56,8 +79,8 @@
                 June 2018 - July 2019
             </p>
         </li>
-        <li>
-            <b>Project Intern</b>
+        <li  class="job">
+            <h3>Project Intern</h3>
             <p>
                 Caterpillar India Private Limited, Bangalore <br/>
                 Large Power Systems Department <br/>
@@ -66,8 +89,8 @@
                 Nov 2017 - Feb 2018
             </p>
         </li>
-        <li>
-            <b>Research Intern</b>
+        <li  class="job">
+            <h3>Research Intern</h3>
             <p>
                 Christ University,
                 Department of Mechanical and Automobile Engineering <br/>
@@ -78,12 +101,36 @@
                 Summer 2017
             </p>
         </li>
-        <li>
-            <b>Intern</b>
+        <li  class="job">
+            <h3>Intern</h3>
             <p>
                 Hindustan Aeronautics Limited, Bangalore, India <br/>
-                Aircraft Division
+                Aircraft Division <br/>
+                Summer 2016
             </p>
         </li>
-    </ul>
+
+        </ul>
+
+    </div>
+     <script>
+      const toggleButton = document.querySelector("#mainMenu .menu-toggle");
+      const menu = document.querySelector("#mainMenu ul");
+
+      toggleButton.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+
+      // Highlight current page
+      const menuLinks = document.querySelectorAll("#mainMenu a");
+      const currentPath = window.location.pathname.split("/").pop();
+
+      menuLinks.forEach((link) => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+        if (linkPath === currentPath) {
+          link.classList.add("active");
+        }
+      });
+    </script>
 </body>
+</html>
