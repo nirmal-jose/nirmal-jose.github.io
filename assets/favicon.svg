@@ -1,0 +1,23 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background Circle -->
+  <circle cx="300" cy="300" r="300" fill="black"/>
+
+  <!-- Single Thin Outer Ring -->
+  <circle cx="300" cy="300" r="250"
+          stroke="#ffffff"
+          stroke-width="3"
+          fill="none"/>
+
+  <!-- NJ Text -->
+  <text x="300" y="385"
+        text-anchor="middle"
+        font-family="Arvo, serif"
+        font-size="300"
+        font-weight="700"
+        letter-spacing="2"
+        fill="#ffffff">
+    NJ
+  </text>
+
+</svg>
