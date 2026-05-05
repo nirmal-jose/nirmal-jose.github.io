@@ -2,7 +2,7 @@
 
 Personal GitHub Pages site (static HTML). Clone and run locally or deploy via GitHub Pages.
 
-📁 Project Structure
+### 📁 Project Structure
 - assets/
   - pages/ 
   - projects/
@@ -12,7 +12,7 @@ Personal GitHub Pages site (static HTML). Clone and run locally or deploy via Gi
 - LICENSE
 - README.md
 
-🚀 Project Setup
+### 🚀 Project Setup
 1. Clone the repository:
    git clone https://github.com/nirmal-jose/nirmal-jose.github.io.git
 2. Enter the project folder:
@@ -21,5 +21,5 @@ Personal GitHub Pages site (static HTML). Clone and run locally or deploy via Gi
    - double-click index.html, or
    - run a simple HTTP server (recommended)
 
-📤 Deploy
+### 📤 Deploy
 - Push changes to the repo's main branch — GitHub Pages will publish automatically if enabled for this repository.
